@@ -3,30 +3,30 @@
 <script>
   const CONFIG = {
     categories: [
-      { name: "Work", commands: [
-        { key: 'g', name: 'GitHub', url: 'https://github.com', search: '/search?q={}' },
-        { key: 'm', name: 'Inbox', url: 'https://inbox.google.com', search: '/search/{}' },
-        { key: 'k', name: 'Keep', url: 'https://keep.google.com', search: '/#search/text={}' },
+      { name: "Education", commands: [
+        { key: 'g', name: 'Blackboard', url: 'https://fcps.blackboard.com', search: '/search?q={}' },
+        { key: 'm', name: 'SISStudent', url: 'https://sisstudent.fcps.edu', search: '/search/{}' },
+        { key: 'k', name: 'GClassroom', url: 'https://classroom.google.com', search: '/#search/text={}' },
       ] },
-      { name: "Lurk", commands: [
-        { key: 'i', name: 'Instagram', url: 'https://www.instagram.com', search: false },
-        { key: 'r', name: 'Reddit', url: 'https://www.reddit.com', search: '/search?q={}' },
-        { key: 't', name: 'Twitter', url: 'https://twitter.com', search: '/search?q={}' },
+      { name: "Media", commands: [
+        { key: 's', name: 'Steam', url: 'https://store.steampowered.com/', search: false },
+        { key: 'y', name: 'YouTube', url: 'https://www.youtube.com', search: '/search?q={}' },
+        { key: 'a', name: 'Amazon', url: 'https://www.amazon.com', search: '/search?q={}' },
       ] },
-      { name: "Listen", commands: [
-        { key: 'h', name: 'Hypem', url: 'http://hypem.com/popular', search: '/search/{}' },
-        { key: 'l', name: 'LineRadio', url: 'https://linerad.io', search: '/#/{}' },
-        { key: 's', name: 'SoundCloud', url: 'https://soundcloud.com/discover', search: '/search?q={}' },
+      { name: "News", commands: [
+        { key: 'p', name: 'Product Hunt', url: 'https://www.producthunt.com', search: '/search/{}' },
+        { key: 'r', name: 'Reddit', url: 'https://www.reddit.com', search: '/#/{}' },
+        { key: 'T', name: 'Codrops', url: 'https://tympanus.net/codrops', search: '/search?q={}' },
       ] },
-      { name: "Watch", commands: [
-        { key: 'n', name: 'Netflix', url: 'https://www.netflix.com/browse', search: '/search?q={}' },
-        { key: 'w', name: 'Twitch', url: 'https://www.twitch.tv/directory/following', search: false },
-        { key: 'y', name: 'YouTube', url: 'https://youtube.com/feed/subscriptions', search: '/results?search_query={}' },
+      { name: "Social", commands: [
+        { key: 'i', name: 'Inbox', url: 'https://inbox.google.com', search: '/search?q={}' },
+        { key: 'f', name: 'Facebook', url: 'https://www.facebook.com', search: false },
+        { key: 'm', name: 'Messenger', url: 'https://www.messenger.com', search: '/results?search_query={}' },
       ] },
-      { name: "Download", commands: [
-        { key: 'T', name: 'TPB', url: 'https://thepiratebay.org', search: '/search/{}' },
-        { key: 'Y', name: 'YIFY', url: 'https://yts.ag/browse-movies/0/1080p/all/7/latest', search: '/browse-movies/{}/1080p/all/0/rating' },
-        { key: '7', name: '7digital', url: 'https://us.7digital.com', search: '/search?q={}' },
+      { name: "Tools", commands: [
+        { key: 'd', name: 'Drive', url: 'https://drive.google.com/drive', search: '/search/{}' },
+        { key: 'g', name: 'GitHub', url: 'https://github.com', search: '' },
+        { key: 'w', name: 'WolframAlpha', url: 'http://wolframalpha.com', search: '/search?q={}' },
       ] },
     ],
 
@@ -52,7 +52,7 @@
     suggestionsLimit: 4,
 
     // open queries in a new tab.
-    newTab: true,
+    newTab: false,
 
     // the delimiter between the hours and minutes in the clock.
     clockDelimiter: '&nbsp;',
@@ -88,6 +88,11 @@
     padding: 0;
     color: #333;
     font-family: 'Lato', sans-serif;
+	background: url('backgrounds/mountains.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-background-size: cover;
   }
 
   main {
@@ -173,8 +178,8 @@
     transform: translateY(10px);
     opacity: 0;
     background: #00d2ff;
-    background: -webkit-linear-gradient(to top left, #00d2ff, #3a7bd5);
-    background: linear-gradient(to top left, #00d2ff, #3a7bd5);
+    background: -webkit-linear-gradient(to top left, #ffffff, #3a7bd5);
+    background: linear-gradient(to top left, #ffffff, #3a7bd5);
     font-size: 1.2rem;
   }
 
